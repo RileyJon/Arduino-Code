@@ -77,7 +77,7 @@ void loop() {
 
       LastDebounceTime = millis(); //LastDebounceTime is set to the Current Time
 
-      LedMode =1; //Change LedMode to 0 for On to Occur on the Next Button Press
+      LedMode =1; //Change LedMode to 1 for On to Occur on the Next Button Press
      }
 
   }//Close If for the Time Buffer to Prevent Switch Bouncing
