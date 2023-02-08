@@ -51,9 +51,9 @@ void loop() {
     }
     else if ( (ButtonBoolean == HIGH) && (LedMode == 2) ) { //If the Button is Pressed and the LedMode is set to 2 then display the Random Color Mode
 
-      const int RandNum1 = random(0,255); //random number is set on each loop for Red
-      const int RandNum2 = random(0,255); //random number is set on each loop for Green
-      const int RandNum3 = random(0,255); //random number is set on each loop for Blue
+      int RandNum1 = random(0,255); //random number is set on each loop for Red
+      int RandNum2 = random(0,255); //random number is set on each loop for Green
+      int RandNum3 = random(0,255); //random number is set on each loop for Blue
 
       delay(100); //Delay for 1 second
 
