@@ -16,7 +16,7 @@ int ButtonBoolean;
 
 //Debounce Variables
 long LastDebounceTime = 0;
-long DebounceDelay = 50;
+long DebounceDelay = 150; //Set to 150 milliseconds for each Button Press (If increased it will less likely switch bounce will occur)
 int LedMode = 1; //Set to 1 so the Arduino Starts in the "Off Mode"
 
 
