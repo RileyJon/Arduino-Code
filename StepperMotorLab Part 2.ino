@@ -4,7 +4,7 @@ const int stepsPerRevolution = 2048; // change this to fit the number of steps p
 const int rolePerMinute = 15; // Adjustable range of 28BYJ-48 stepper is 0~17 rpm
 
 int inputPin = A0; //Potentiomoter is connected to A0
-float degreePerStep = 0.1; //Variable is set for how many degree the stepper motor will move per setp
+float degreePerStep = 0.1; //Variable is set for how many degree the stepper motor will move per step
 
 int previousStep = 0; //Variable is set for previous Step position
 int currentStep = 0; //Variable is set for current Step position
