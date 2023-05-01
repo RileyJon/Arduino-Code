@@ -1,4 +1,3 @@
-
 #include <DHT.h> //DHT library for the sensor
 #include <LiquidCrystal.h> //LiquidCrystal library for the 16x2 display
 
@@ -25,13 +24,13 @@ void setup() {
 void loop() {
   float temperatureC = dht.readTemperature(); // Read the temperature and humidity from the sensor
 
-  float temperatureF = (temperatureC * 1.8) + 22; // Convert Celsius to Fahrenheit - (To account for sensor error I had to adjust 32 to 22 in the Temp Conversion Formula)
+  float temperatureF = (temperatureC * 1.8) + 32; // Convert Celsius to Fahrenheit - (To account for sensor error I had to adjust 32 to 22 in the Temp Conversion Formula)
 
   float potValue = analogRead(POT_PIN);   // Read the potentiometer value
 
-  float fanThreshold = map(potValue, 0, 1023, 20, 32); // Map the potentiometer value to the fan threshold temperature range (20-32 degrees Celsius)
+  float fanThreshold = map(potValue, 0, 1023, 15, 32); // Map the potentiometer value to the fan threshold temperature range (20-32 degrees Celsius)
 
-  float settemperatureF = (fanThreshold * 1.8) + 22; // Convert Celsius to Fahrenheit - (To account for sensor error I had to adjust 32 to 22 in the Temp Conversion Formula)
+  float settemperatureF = (fanThreshold * 1.8) + 32; // Convert Celsius to Fahrenheit - (To account for sensor error I had to adjust 32 to 22 in the Temp Conversion Formula)
 
   // Print the temperature and fan threshold values to the display
   lcd.setCursor(0, 0); //First Row
